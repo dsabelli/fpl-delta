@@ -1,10 +1,9 @@
-import app from "./app";
-import http from "http";
-import { PORT } from "./utils/config";
-import { info } from "./utils/logger";
+var app = require("./app");
+const http = require("http");
+const { PORT } = require("./utils/config");
 
 const server = http.createServer(app);
 
 server.listen(PORT, () => {
-  info(`Server running on port ${PORT}`);
+  console.log(`Server running on port ${PORT}`);
 });
